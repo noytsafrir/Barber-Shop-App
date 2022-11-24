@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane fx:id="apSignIn" maxHeight="400.0" maxWidth="335.0" prefHeight="400.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Pages.StartPage.ViewSignIn">
+   <children>
+      <Label alignment="CENTER" layoutX="147.0" layoutY="79.0" text="Sign in" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <GridPane layoutX="26.0" layoutY="159.0" prefHeight="30.0" prefWidth="277.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="91.39996337890625" minWidth="10.0" prefWidth="52.59998779296876" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.40004272460936" minWidth="0.0" prefWidth="12.600012207031227" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.399951171875" minWidth="10.0" prefWidth="104.40000000000003" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField fx:id="tfPrePhone" onMouseClicked="#clearTextField" prefHeight="26.0" prefWidth="38.0" promptText="050" GridPane.columnIndex="1" />
+            <TextField fx:id="tfPostPhone" onMouseClicked="#clearTextField" prefHeight="26.0" prefWidth="119.0" promptText="0000000" GridPane.columnIndex="3" />
+            <Label text="Phone number" />
+            <Label text=" -" GridPane.columnIndex="2" />
+         </children>
+         <padding>
+            <Insets left="25.0" right="25.0" />
+         </padding>
+      </GridPane>
+      <Label fx:id="lblMsgError" alignment="CENTER" layoutX="119.0" layoutY="257.0" prefHeight="50.0" text="ERROR MESSAGE" textAlignment="CENTER" textFill="#4d9df2" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <GridPane layoutX="97.0" layoutY="249.0" prefHeight="71.0" prefWidth="335.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="168.0">
+               <children>
+                  <JFXButton fx:id="btnSignIn" onAction="#btnActionSignIn" text="Sign in" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <JFXButton fx:id="btnBack" onAction="#btnActionBack" text="Back" />
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

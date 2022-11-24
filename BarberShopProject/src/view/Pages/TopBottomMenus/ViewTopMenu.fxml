@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="apTopMenu" prefHeight="112.0" prefWidth="341.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Pages.TopBottomMenus.ViewTopMenu">
+   <children>
+      <ImageView fitHeight="125.0" fitWidth="358.0" layoutX="-1.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/headline.jpg" />
+         </image>
+      </ImageView>
+      <JFXHamburger fx:id="btnHmbMenu" layoutX="14.0" layoutY="14.0" styleClass="jfx-hamburger-icon" />
+      <ImageView fitHeight="62.0" fitWidth="229.0" layoutX="99.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/barberTextHead.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

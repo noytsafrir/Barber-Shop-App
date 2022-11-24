@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="400.0" maxWidth="335.0" minHeight="400.0" prefHeight="400.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Pages.HomePage.ViewUserHomePage">
+   <children>
+      <Label fx:id="lblHiMsgUser" alignment="CENTER" contentDisplay="CENTER" layoutY="8.0" maxWidth="335.0" prefHeight="44.0" prefWidth="335.0" text="Hi FirstName LastName" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" AnchorPane.bottomAnchor="348.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="8.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="apNoAppointment" layoutX="10.0" layoutY="134.0" maxWidth="335.0" prefWidth="335.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="37.0" maxWidth="335.0" prefWidth="335.0" text="You dont have any scheduled appointment" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="btnNewAppointment" onAction="#btnActionNewAppointment" text="Add" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="apNextAppointment" layoutY="70.0" maxWidth="335.0" prefWidth="335.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="-25.0" prefHeight="44.0" prefWidth="335.0" text="Your next appointment :" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <GridPane alignment="CENTER" layoutY="26.0" prefHeight="198.0" prefWidth="370.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.66667175292969" minWidth="10.0" prefWidth="57.66667175292969" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.33332824707031" minWidth="10.0" prefWidth="72.33332824707031" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label contentDisplay="CENTER" text="Date:">
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                  </Label>
+                  <Label text="Time:" GridPane.rowIndex="1" />
+                  <Label text="Style:" GridPane.rowIndex="2" />
+                  <Label text="Hair Style Price" GridPane.rowIndex="3" />
+                  <Label fx:id="lblNextAppDate" text="99/99/9999" GridPane.columnIndex="1" />
+                  <Label fx:id="lblNextAppTime" text="99:99 - 99:99" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="lblNextAppStyle" text="XXX, YYY," GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="lblNextAppPrice" text="9999" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="Products Price" GridPane.rowIndex="4" />
+                  <Label fx:id="lblTotalPrice" text="9999" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+               </children>
+               <padding>
+                  <Insets left="65.0" />
+               </padding>
+            </GridPane>
+            <VBox prefHeight="103.0" prefWidth="335.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <GridPane alignment="CENTER" prefHeight="78.0" prefWidth="335.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <JFXButton fx:id="btnProducts" onAction="#btnActionMngProducts" text="Products" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="131.0" prefWidth="335.0" spacing="70.0">
+                           <children>
+                              <JFXButton fx:id="btnEditAppointment" onAction="#btnActionEditAppointment" text="Edit" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+                  <HBox alignment="CENTER" prefHeight="93.0" prefWidth="335.0">
+                     <children>
+                        <JFXButton fx:id="btnCancelAppointment" onAction="#btnActionCancelAppointment" text="Delete" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

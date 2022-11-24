@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="apBottom" prefHeight="100.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Pages.TopBottomMenus.ViewBottom">
+   <children>
+      <ImageView fx:id="instagramIcon" fitHeight="60.0" fitWidth="60.0" layoutX="109.0" layoutY="34.0" onMouseClicked="#openInstagramByIcon" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/instagram.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="whatsappIcon" fitHeight="60.0" fitWidth="60.0" layoutX="190.0" layoutY="34.0" onMouseClicked="#openWhatsappByIcon" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/whatsapp.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="facebookIcon" fitHeight="79.0" fitWidth="91.0" layoutX="259.0" layoutY="24.0" onMouseClicked="#openFacebookByIcon" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/facebook.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="phoneIcon" fitHeight="60.0" fitWidth="60.0" layoutX="26.0" layoutY="34.0" onMouseClicked="#callByIcon" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/phone%20contact.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
